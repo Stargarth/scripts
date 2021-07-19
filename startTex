@@ -1,0 +1,15 @@
+#!/bin/sh
+FileName=$1
+echo "
+\\documentclass[12pt]{article}
+\\usepackage{bm}
+\\usepackage[margin=3cm]{geometry}
+\\usepackage{graphicx}
+\\graphicspath{{./graphics/}}
+\\begin{document}
+\\section{Intro}
+
+\\end{document}
+" > $FileName.tex
+mkdir graphics
+pdflatex $FileName.tex
